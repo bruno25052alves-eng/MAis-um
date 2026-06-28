@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistemas Operacionais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="progressBar"></div>
+
+<div class="sidebar">
+  <h2>⚡ Sistemas</h2>
+  <a href="#inicio">🏠 Início</a>
+  <a href="#ios">📱 iOS</a>
+  <a href="#android">🤖 Android</a>
+  <a href="#linux">🐧 Linux</a>
+  <a href="#windows">🪟 Windows</a>
+  <a href="#comparacao">📊 Comparação</a>
+  <a href="#quiz">🧠 Quiz</a>
+</div>
+
+<div class="content">
+
+<!-- INÍCIO -->
+<section id="inicio">
+  <h1>🌐 Sistemas Operacionais</h1>
+
+  <p>
+    Um sistema operacional (SO) é o software responsável por gerenciar hardware,
+    memória, processos e aplicativos. Ele atua como intermediário entre o usuário
+    e o computador.
+  </p>
+
+  <h3>📌 Funções principais</h3>
+  <ul>
+    <li>Gerenciar memória RAM</li>
+    <li>Controlar CPU</li>
+    <li>Executar aplicativos</li>
+    <li>Gerenciar arquivos</li>
+    <li>Garantir segurança</li>
+  </ul>
+</section>
+
+<!-- IOS -->
+<section id="ios">
+  <h1>📱 iOS</h1>
+
+  <p>
+    Sistema da Apple, baseado no Unix (Darwin), usado exclusivamente em iPhones.
+  </p>
+
+  <h3>🔐 Segurança</h3>
+  <ul>
+    <li>Sandbox de aplicativos</li>
+    <li>App Store controlada</li>
+    <li>Atualizações rápidas</li>
+  </ul>
+
+  <h3>👍 Vantagens</h3>
+  <ul>
+    <li>Alta segurança</li>
+    <li>Desempenho fluido</li>
+    <li>Integração Apple</li>
+  </ul>
+</section>
+
+<!-- ANDROID -->
+<section id="android">
+  <h1>🤖 Android</h1>
+
+  <p>
+    Sistema do Google baseado no kernel Linux, usado por vários fabricantes.
+  </p>
+
+  <h3>📱 Características</h3>
+  <ul>
+    <li>Alta personalização</li>
+    <li>Grande variedade de aparelhos</li>
+    <li>Google Play Store</li>
+  </ul>
+</section>
+
+<!-- LINUX -->
+<section id="linux">
+  <h1>🐧 Linux</h1>
+
+  <p>
+    Sistema open-source criado por Linus Torvalds em 1991.
+  </p>
+
+  <h3>📦 Distribuições</h3>
+  <ul>
+    <li>Ubuntu</li>
+    <li>Debian</li>
+    <li>Fedora</li>
+    <li>Arch Linux</li>
+  </ul>
+
+  <h3>👍 Vantagens</h3>
+  <ul>
+    <li>Código aberto</li>
+    <li>Seguro</li>
+    <li>Leve</li>
+  </ul>
+</section>
+
+<!-- WINDOWS -->
+<section id="windows">
+  <h1>🪟 Windows</h1>
+
+  <p>
+    Sistema da Microsoft, o mais usado em computadores pessoais.
+  </p>
+
+  <h3>📊 Versões</h3>
+  <ul>
+    <li>Windows 7</li>
+    <li>Windows 10</li>
+    <li>Windows 11</li>
+  </ul>
+
+  <h3>👍 Vantagens</h3>
+  <ul>
+    <li>Compatibilidade</li>
+    <li>Fácil uso</li>
+    <li>Jogos</li>
+  </ul>
+</section>
+
+<!-- COMPARAÇÃO -->
+<section id="comparacao">
+  <h1>📊 Comparação</h1>
+
+  <table>
+    <tr>
+      <th>Sistema</th>
+      <th>Segurança</th>
+      <th>Uso</th>
+    </tr>
+    <tr>
+      <td>iOS</td>
+      <td>⭐⭐⭐⭐⭐</td>
+      <td>Mobile</td>
+    </tr>
+    <tr>
+      <td>Android</td>
+      <td>⭐⭐⭐</td>
+      <td>Mobile</td>
+    </tr>
+    <tr>
+      <td>Linux</td>
+      <td>⭐⭐⭐⭐⭐</td>
+      <td>Servidores</td>
+    </tr>
+    <tr>
+      <td>Windows</td>
+      <td>⭐⭐⭐</td>
+      <td>PC</td>
+    </tr>
+  </table>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <h1>🧠 Quiz Avançado</h1>
+
+  <div class="quiz-box">
+
+    <p>1) Qual kernel o Linux usa?</p>
+    <button onclick="responder('q1','linux', this)">Linux Kernel</button>
+    <button onclick="responder('q1','windows', this)">Windows Kernel</button>
+
+    <p>2) iOS é baseado em qual sistema?</p>
+    <button onclick="responder('q2','darwin', this)">Darwin</button>
+    <button onclick="responder('q2','linux', this)">Linux</button>
+
+    <p>3) Windows moderno usa qual núcleo?</p>
+    <button onclick="responder('q3','nt', this)">Windows NT</button>
+    <button onclick="responder('q3','linux', this)">Linux</button>
+
+    <p>4) Sistema mais aberto?</p>
+    <button onclick="responder('q4','android', this)">Android</button>
+    <button onclick="responder('q4','ios', this)">iOS</button>
+
+    <p>5) Criador do Linux?</p>
+    <button onclick="responder('q5','linus', this)">Linus Torvalds</button>
+    <button onclick="responder('q5','bill', this)">Bill Gates</button>
+
+    <br><br>
+    <button onclick="mostrarResultado()">Ver Resultado</button>
+
+    <h2 id="resultadoQuiz"></h2>
+  </div>
+</section>
+
+</div>
+
+<button id="topButton" onclick="voltarTopo()">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
